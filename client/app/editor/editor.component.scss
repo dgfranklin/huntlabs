@@ -1,0 +1,6 @@
+@import '~@angular/material/core/theming/theming';
+@import '../../huntlabs-app-theme';
+
+md-toolbar {
+  color: md-color($primary, 1);
+}

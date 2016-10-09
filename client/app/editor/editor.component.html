@@ -1,0 +1,18 @@
+<md-toolbar>Senior School Course Calendar Generator</md-toolbar>
+<md-card>
+  <md-card-title>Enter Schedule</md-card-title>
+  <md-card-subtitle>
+    <p> Fill in the requested information about and HuntLabs will create a customized calendar with your courses.</p>
+    <p> You can use this calendar on your phone or computer. You can even share it with friends. </p>
+  </md-card-subtitle>
+  <md-card-content>
+    <form  (ngSubmit)="onSubmit()" #appEditor="ngForm">
+      <div class="course" *ngFor="let course of courses">
+        <app-editor-course [dayNumber]="course"></app-editor-course>
+      </div>
+    </form>
+  </md-card-content>
+  <md-card-actions>
+    <button md-raised-button color="primary" type="submit" (click)="onSubmit()">Submit</button>
+  </md-card-actions>
+</md-card>
