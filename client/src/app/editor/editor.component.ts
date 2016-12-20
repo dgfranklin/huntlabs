@@ -8,6 +8,8 @@ import {CoursesService} from '../services/courses.service';
 })
 export class EditorComponent implements OnInit {
   courses = Array.from(new Array(8).keys()).map((i) => i + 1);
+
+  /** @ngIngect */
   constructor(private courseService: CoursesService) {}
 
   ngOnInit() {}

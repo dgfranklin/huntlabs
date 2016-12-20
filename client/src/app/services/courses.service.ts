@@ -3,7 +3,7 @@
  */
 import { Injectable} from '@angular/core';
 import { Http } from '@angular/http';
-import {ScheduleResponse} from '../../../shared/schedule';
+import {ScheduleResponse} from '../../common/schedule';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()

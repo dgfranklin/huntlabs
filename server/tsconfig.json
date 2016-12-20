@@ -1,17 +1,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "declaration": false,
-    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "module": "commonjs",
-    "moduleResolution": "node",
-    "outDir": "../server-dist/out-tsc",
-    "sourceMap": true,
+    "noImplicitAny": true,
+    "noEmitOnError": true,
     "target": "es5",
-    "typeRoots": [
-      "../node_modules/@types",
-      "../shared"
-    ]
+    "sourceMap": true
   }
 }

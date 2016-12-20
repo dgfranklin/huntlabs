@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class HuntlabsPage {
+export class ClientPage {
   navigateTo() {
     return browser.get('/');
   }
