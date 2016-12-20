@@ -1,20 +1,20 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Course, CourseKind, CourseLunchBlock} from "../../models/course";
 
-class KindOption {
+export class KindOption {
   name: string;
   value: CourseKind
 }
 
-class CourseLunchBlockOption {
+export class CourseLunchBlockOption {
   name: string;
   value: CourseLunchBlock;
 }
 
 @Component({
   selector: 'app-editor-course',
-  templateUrl: 'editor-course.component.html',
-  styleUrls: ['editor-course.component.scss']
+  templateUrl: './editor-course.component.html',
+  styleUrls: ['./editor-course.component.scss']
 })
 export class EditorCourseComponent implements OnInit {
   @Input() dayNumber: number;

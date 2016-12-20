@@ -3,7 +3,7 @@ import {CoursesService} from '../services/courses.service';
 
 @Component({
   selector: 'app-editor',
-  templateUrl: 'editor.component.html',
+  templateUrl: './editor.component.html',
   styleUrls: ['./editor.component.scss']
 })
 export class EditorComponent implements OnInit {
