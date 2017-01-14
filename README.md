@@ -12,17 +12,17 @@ For its initial scope, HuntLabs will be exclusively a web app, but down the road
 
 ## Stack Overview
 HuntLabs uses [Angular](https://angular.io/) for its frontend, and makes use of [Angular Material](https://material.angular.io/) for its implementation of Material Design.
-On the backend, HuntLabs is driven by [Node.js](https://nodejs.org/) and uses the [Express](expressjs.com) framework.
+On the backend, HuntLabs is driven by [Node.js](https://nodejs.org/) and uses the [Express](http://expressjs.com) framework.
 [MongoDB](https://www.mongodb.com/) is used as its database. (Yes, this is a "MEAN" stack)
 
 Both the frontend and backend are written in [TypeScript](https://www.typescriptlang.org), a typed superset of JavaScript.
-[gulp.js](gulpjs.com) is used for build automation. Instead of running our own CalDav server, the actual calendars will be stored on Google Calendar using [its API](  https://developers.google.com/google-apps/calendar/).
+[gulp.js](http://gulpjs.com) is used for build automation. Instead of running our own CalDav server, the actual calendars will be stored on Google Calendar using [its API](  https://developers.google.com/google-apps/calendar/).
 
 ## Status
 Currently this is not much more than a rough skeleton, but it should be a decent structure to build on.
 
 Major areas that need to be worked on:
-- Conversion of courses to calendar events (In Progress)
+- Conversion of courses to events (In Progress)
 - Authentication
 - Storing user's courses in a database for subsequent changes
 - Interfacing with Google Calendar API to create and update schedules
@@ -43,7 +43,7 @@ You should then install [angular-cli](https://github.com/angular/angular-cli) gl
 npm install -g angular-cli@latest
 ```
 
-Likewise, you install [gulp.js](gulpjs.com) globally with npm:
+Likewise, install [gulp.js](http://gulpjs.com) globally with npm:
 ```bash
 npm install -g gulp@latest
 ```
