@@ -1,4 +1,4 @@
-import {ServerApp} from './server-app'
+import {ServerApp} from './server_app'
 
 var serverApp = new ServerApp();
 

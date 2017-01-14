@@ -16,11 +16,11 @@ export class ServerApp {
 
     public startServer() {
         this.app.listen(5000, function () {
-            console.log('Example app listening on port 5000!');
+            console.log('HuntLabs server listening on port 5000!');
         });
     }
 
-        //Add a method to render index.html on path '/'
+    /** Add a method to render index.html on path '/' */
     private renderIndex(req: express.Request, res: express.Response) {
         res.sendFile(path.resolve(__dirname, 'client',' index.html'));
     }

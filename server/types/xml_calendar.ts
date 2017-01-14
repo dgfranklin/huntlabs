@@ -6,6 +6,7 @@ interface BaseBlock {
 export interface PeriodBlock extends BaseBlock {
     endTime: string[],
     startTime: string[],
+    foo: string[],
 }
 
 export interface StaticBlock extends BaseBlock {
@@ -32,11 +33,12 @@ export function isPeriodBlock(block: Block): block is PeriodBlock {
 export function isLunchBlock(block: Block): block is LunchBlock {
     return block.type[0] === 'lunch';
 }
+
 export function isStaticBlock(block: Block): block is StaticBlock {
     return block.type[0] === 'static';
 }
 
-export interface ScheduleType {
+export interface DayLayout {
     // This is remapped from "default" by the parser.
     isDefault: string[],
     fullName: string[],
@@ -50,23 +52,23 @@ export interface ScheduleType {
 
 }
 
-export interface ScheduleDay {
+export interface CalendarDay {
     date: string[],
     dayNumber: string[],
     scheduleType: string[],
 }
 
 /** The format expected from the parser result. 2JS forces everything to an array since  does distinguish between an array of size one and standalone attibute.*/
-export interface Schedule {
+export interface Calendar {
     root: {
         scheduleDays: [
             {
-                scheduleDay: ScheduleDay[]
+                scheduleDay: CalendarDay[]
             }
         ]
         scheduleTypes: [
             {
-                scheduleType: ScheduleType[]
+                scheduleType: DayLayout[]
             }
         ]
     };

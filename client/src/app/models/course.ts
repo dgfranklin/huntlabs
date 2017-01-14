@@ -19,5 +19,4 @@ export class Course {
     public kind: CourseKind,
     public lunch: CourseLunchBlock
   ) {}
-
 }
