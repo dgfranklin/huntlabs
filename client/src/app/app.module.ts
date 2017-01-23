@@ -1,27 +1,32 @@
+import { MaterialModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { MaterialModule } from '@angular/material';
+import { HuntlabsRoutingModule} from './app-routing.module';
+import { SchedulerModule } from './scheduler/scheduler.module'
+import { AdminModule } from './admin/admin.module'
 
-import {CoursesService} from './services/courses.service';
 import { AppComponent } from './app.component';
-import {EditorComponent} from './editor/editor.component';
-import {EditorCourseComponent} from './editor/editor-course/editor-course.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EditorComponent,
-    EditorCourseComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule,
     MaterialModule.forRoot(),
+    FlexLayoutModule.forRoot(),
+
+    AdminModule,
+    SchedulerModule,
+
+    // This has to be loaded after modules with other routing or it will overwrite them.
+    HuntlabsRoutingModule,
   ],
-  providers: [CoursesService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

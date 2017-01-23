@@ -1,0 +1,9 @@
+@import '~@angular/material/core/theming/theming';
+@import '../../../huntlabs-app-theme';
+
+hunt-editor-course {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-bottom: 32px;
+}

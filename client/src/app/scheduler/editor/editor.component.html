@@ -1,0 +1,13 @@
+<md-card>
+  <md-card-title>Courses</md-card-title>
+  <md-card-content>
+    <form  (ngSubmit)="onSubmit()" #appEditor="ngForm">
+      <div class="course" *ngFor="let course of courses">
+        <hunt-editor-course [dayNumber]="course"></hunt-editor-course>
+      </div>
+    </form>
+  </md-card-content>
+  <md-card-actions>
+    <button md-raised-button color="primary" type="submit" (click)="onSubmit()">Submit</button>
+  </md-card-actions>
+</md-card>

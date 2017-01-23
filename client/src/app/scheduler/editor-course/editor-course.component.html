@@ -1,30 +1,21 @@
-<table>
-  <tr>
-    <td>
-      <div class="editor-course-label"> Day {{dayNumber}}, Period 4</div>
-    </td>
-    <td>
-      <div class="editor-fields">
-        <md-input class="course-name" placeholder="Course Name" [attr.name]="'name-' + model.dayNumber" [(ngModel)]="model.name"></md-input>
-        <table>
+<div class="row">
+    <md-input class="course-name" placeholder="Day {{dayNumber}}, Period 4" [attr.name]="'name-' + model.dayNumber" [(ngModel)]="model.name"></md-input>
+        <table class="course-options"> 
           <tr>
-            <td class="form-label"><label [attr.id]="'kind-group-' + model.dayNumber">Kind</label></td>
-            <td>
+            <td class="course-field-label"><label [attr.id]="'kind-group-' + model.dayNumber">Kind</label></td>
+            <td class="course-field">
               <md-button-toggle-group [attr.name]="'kind-group-' + model.dayNumber" [attr.id]="'kind-group-' + model.dayNumber" [(ngModel)]="model.kind" >
                 <md-button-toggle *ngFor="let kindOption of kindOptions" [value]="kindOption.value">{{kindOption.name}}</md-button-toggle>
               </md-button-toggle-group>
             </td>
           </tr>
           <tr>
-            <td class="form-label"><label [attr.for]="'lunch-group-' + model.dayNumber"> Meets</label></td>
-            <td>
+            <td class="course-field-label"><label [attr.for]="'lunch-group-' + model.dayNumber">Meets</label></td>
+            <td class="course-field">
               <md-button-toggle-group [attr.name]="'lunch-group-' + model.dayNumber" [attr.id]="'lunch-group-' + model.dayNumber" [(ngModel)]="model.lunch">
                 <md-button-toggle *ngFor="let lunchBlockOption of lunchBlockOptions" [value]="lunchBlockOption.value">{{lunchBlockOption.name}}</md-button-toggle>
               </md-button-toggle-group>
             </td>
           </tr>
         </table>
-      </div>
-    </td>
-  </tr>
-</table>
+</div>

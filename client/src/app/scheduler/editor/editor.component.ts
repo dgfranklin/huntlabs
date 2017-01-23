@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {CoursesService} from '../services/courses.service';
 
 @Component({
-  selector: 'app-editor',
+  selector: 'hunt-editor',
+  providers: [ CoursesService ],
   templateUrl: './editor.component.html',
   styleUrls: ['./editor.component.scss']
 })

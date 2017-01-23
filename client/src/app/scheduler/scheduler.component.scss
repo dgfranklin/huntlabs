@@ -1,0 +1,30 @@
+@import '~@angular/material/core/theming/theming';
+@import '../../huntlabs-app-theme';
+
+:host {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow-x: hidden;
+}
+
+.flex-container {
+  width: 100%;
+}
+.content {
+  margin: 16px;
+}
+
+.flex-item {
+  display: inline-block;
+}
+
+hunt-editor {
+  // // max-width: 800px;
+  min-width: 400px;
+  // width: 100%;
+}
+
+// .calendar {
+//    min-width: 300px;
+//    width: 100%;

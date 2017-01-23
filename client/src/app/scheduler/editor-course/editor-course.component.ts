@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {Course, CourseKind, CourseLunchBlock} from "../../models/course";
+import {Course, CourseKind, CourseLunchBlock} from "../models/course";
 
 export class KindOption {
   name: string;
@@ -12,7 +12,7 @@ export class CourseLunchBlockOption {
 }
 
 @Component({
-  selector: 'app-editor-course',
+  selector: 'hunt-editor-course',
   templateUrl: './editor-course.component.html',
   styleUrls: ['./editor-course.component.scss']
 })
