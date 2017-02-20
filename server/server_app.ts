@@ -17,8 +17,8 @@ export class ServerApp {
     }
 
     public startServer() {
-        this.app.listen(5000, function () {
-            console.log('HuntLabs server listening on port 5000!');
+        this.app.listen(8080, function () {
+            console.log('HuntLabs server listening on port 8080!');
         });
     }
 

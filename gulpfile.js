@@ -34,6 +34,13 @@ gulp.task('watch-server', ['build:server'], function () {
 	gulp.watch('server/**/*.ts', ['build:server']);
 });
 
+gulp.task('build:client', function () {
+	return gulp.src('')
+	.pipe(
+		shell(['ng build --output-path ../build/client'],{cwd:'client'})
+	)
+});
+
 gulp.task('build:client:watch', function () {
 	return gulp.src('')
 	.pipe(
@@ -41,8 +48,10 @@ gulp.task('build:client:watch', function () {
 	)
 });
 
-gulp.task('build', function (callback) {   
+gulp.task('build-watch', function (callback) {   
     runSequence('copy:common','build:server','watch-common','watch-server','build:client:watch', callback);
 });
+
+gulp.task('build', ['copy:common', 'build:server', 'build:client']);
 
 gulp.task('default', ['build']);
